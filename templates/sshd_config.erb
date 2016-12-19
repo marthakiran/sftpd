@@ -1,0 +1,75 @@
+#managed by puppet dont make any changes 
+<% if (@port != nil) -%>
+port <%= @port %>
+<% end -%>
+
+<% if (@listenaddress != nil) -%>
+ListenAddress <%= @listenaddress %>
+<% end -%>
+
+Protocol <%= @protocol %>
+
+#logging 
+#obsoletes QuietMode and FascistLogging
+#SyslogFacility AUTH 
+SyslogFacility <%= @syslogfacility %>
+
+#Authentication
+#MaxAuthTries 6
+#MaxSessions 10
+<% if (@maxauthtries != nil) -%>
+MaxAuthTries <%= @maxauthtries %>
+<% end -%>
+<% if (@maxsessions != nil) -%>
+MaxSessions <%= @maxsessions %>
+<% end -%>
+<% if (@passwordauthentication != nil) -%>
+PasswordAuthentication <%= @passwordauthentication %>
+<% end -%>
+
+<%#Change to no to disable s/key passwords -%>
+<% if (@chalengrespauth != nil) -%>
+ChallengeResponseAuthentication <%= @chalengrespauth %>
+<% end -%>
+
+# GSSAPI options
+#GSSAPIAuthentication no
+#GSSAPICleanupCredentials yes
+#GSSAPIStrictAcceptorCheck yes 
+<% if (@gssapiauth != nil) -%>
+GSSAPIAuthentication <%= @gssapiauth %>
+<% end -%>
+<% if (@gssapicleancreds != nil) -%>
+GSSAPICleanupCredentials <%= @gssapicleancreds %>
+<% end -%>
+<% if (@gssapistrictacceptorcheck != nil) -%>
+GSSAPIStrictAcceptorCheck <%= @gssapistrictacceptorcheck %>
+<% end -%>
+<% if (@gssapikeyexchange != nil) %>
+GSSAPIKeyExchange <%= @gssapikeyexchange %>
+<% end -%>
+
+<% if (usepam != nil) -%>
+UsePAM <%= @usepam %>
+<% end -%>
+
+# Accept locale-related environment variables
+AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
+AcceptEnv XMODIFIERS
+
+<% if (@x11forwarding != nil) -%>
+X11Forwarding <%= @x11forwarding %>
+<% end -%>
+
+# override default of no subsystems 
+#Subsystem	sftp	/usr/libexec/openssh/sftp-server
+Subsystem	sftp	internal-sftp
+
+#match group
+Match Group <%= @matchgroup %>
+   ChrootDirectory %h
+   ForceCommand internal-sftp
+
+
