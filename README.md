@@ -1,4 +1,4 @@
-### km-sftpd
+### kiran-sftpd
 
 Module is going to install openssh and openssh-client application
 and configure itself for sftpd server
