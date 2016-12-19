@@ -1,5 +1,6 @@
 {
   "name": "kiran-sftpd",
+<<<<<<< HEAD
   "version": "0.1.1",
   "author": "Kiran Martha",
   "summary": "manage sFTP servers",
@@ -7,6 +8,15 @@
   "source": "git://github.com/marthakiran/sftpd.git",
   "project_page": "https://github.com/marthakiran/sftpd",
   "issues_url": "https://github.com/marthakiran/sftpd/issues",
+=======
+  "version": "0.1.0",
+  "author": "Kiran Martha",
+  "summary": "manage sFTP servers",
+  "license": "Apache 2.0",
+  "source": "git://github.com/puppetlabs/kiran-sftpd.git",
+  "project_page": "https://github.com/puppetlabs/kiran-sftpd",
+  "issues_url": "https://github.com/puppetlabs/kiran-sftpd/issues",
+>>>>>>> 408c56854ddb9dae83999556af6559afdf053180
   "dependencies": [
     {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0"}
   ]

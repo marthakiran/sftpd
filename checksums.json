@@ -9,7 +9,11 @@
   "manifests/package.pp": "3c0d5b7976daab474d1e13709067916b",
   "manifests/service.pp": "927f9b390620bbd9c3bb38cfd11b4ea6",
   "manifests/users.pp": "f33b29ab517c3a2b7db57bcbb4b91187",
+<<<<<<< HEAD
   "metadata.json": "b0a5073a641179b174c3d9dd1e7c5b46",
+=======
+  "metadata.json": "4af9c0b9622a5f6a52e78cd362776abe",
+>>>>>>> 408c56854ddb9dae83999556af6559afdf053180
   "spec/classes/init_spec.rb": "8c1956b8ff1e3b8dbfb2917dfb176d40",
   "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
   "templates/sshd_config.erb": "34c3016abead39547d4216245cf30e7c",
