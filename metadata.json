@@ -1,0 +1,13 @@
+{
+  "name": "kiran-sftpd",
+  "version": "0.1.1",
+  "author": "Kiran Martha",
+  "summary": "manage sFTP servers",
+  "license": "Apache 2.0",
+  "source": "git://github.com/marthakiran/sftpd.git",
+  "project_page": "https://github.com/marthakiran/sftpd",
+  "issues_url": "https://github.com/marthakiran/sftpd/issues",
+  "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0"}
+  ]
+}

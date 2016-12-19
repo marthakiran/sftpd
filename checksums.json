@@ -1,0 +1,17 @@
+{
+  "Gemfile": "dbc1a15e3a264c03878028240cfc5d89",
+  "README.md": "77dc206be95f0cc443fc4912928c8283",
+  "Rakefile": "20b80e526e351a74df2001f504e756d2",
+  "files/sshd_config": "6fd8234ceae965c05f5fba1adb0d6cb2",
+  "manifests/config.pp": "3137c96575c15b11aa52ce58d825cbb0",
+  "manifests/groups.pp": "96652e81dbeb599f27b15c1e04af9e61",
+  "manifests/init.pp": "8d58de544ac3af70f24ce1877c826852",
+  "manifests/package.pp": "3c0d5b7976daab474d1e13709067916b",
+  "manifests/service.pp": "927f9b390620bbd9c3bb38cfd11b4ea6",
+  "manifests/users.pp": "f33b29ab517c3a2b7db57bcbb4b91187",
+  "metadata.json": "b0a5073a641179b174c3d9dd1e7c5b46",
+  "spec/classes/init_spec.rb": "8c1956b8ff1e3b8dbfb2917dfb176d40",
+  "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+  "templates/sshd_config.erb": "34c3016abead39547d4216245cf30e7c",
+  "tests/init.pp": "36b49d09fd81c90bffc5428c9295f021"
+}
