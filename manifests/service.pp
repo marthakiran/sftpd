@@ -1,9 +1,9 @@
 class sftpd::service (
-	$ensure		= running,
-	$enable		= true,
+  $ensure           = running,
+  $enable           = true,
 
 ) { 
-   validate_bool($enable)
+  validate_bool($enable)
   
   if $::operatingsystem == 'Ubuntu' {
     $service_name    =  ssh
@@ -15,8 +15,8 @@ class sftpd::service (
   }  
 
   service { 'ssh_service':
-    name            => $service_name,
     ensure          => $ensure,
+    name            => $service_name,
     enable          => $enable,
     provider        => $provider,
     binary          => $binary_use,
