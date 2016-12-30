@@ -1,22 +1,26 @@
 define sftpd::groups ( 
    $groupname		= undef,
-   $ensure		= present,
-   $members		= [ ],
+   $ensure		= undef,
    $system		= undef,
 ) {
  
-  validate_array($members)
-  validate_string($groupname)
- 
+  validate_string($groupname) 
+
   if $system != undef {
 	validate_string($system)
   }
-
-  group	{ $name:
-    name		=> $groupname,
-    ensure		=> $ensure,
-    members		=> $members,
-    system		=> $system,
-  }
-
+   if $ensure == 'present' {
+     group { $name:
+      ensure	     => $ensure,
+      name	     => $groupname,
+      members	     => $members,
+      system	     => $system,
+     }
+   }
+    elsif $ensure == 'absent' {
+     group { $name:
+      ensure         => $ensure,
+      name           => $groupname,
+     } 
+   }
 }

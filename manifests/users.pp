@@ -70,9 +70,9 @@ define sftpd::users (
 #command run on agent to change the ownership of sftpd directories
    if $ownership_changed != no {
     exec { "${user} ownerships are changed":
-     onlyif       => "/bin/ls -ld ${home}/${user}/${upload_dir} | /bin/grep -v ${usergroups}",
-     command      => "/bin/chown -R :${usergroups} ${home}/${user}",
-     require      => File["${upload_dir}"],
+     onlyif        => "/bin/ls -ld ${home}/${user}/${upload_dir} | /bin/grep -v ${usergroups}",
+     command       => "/bin/chown -R :${usergroups} ${home}/${user}",
+     require       => File["${upload_dir}"],
     }
    }
   }

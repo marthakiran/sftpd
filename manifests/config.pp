@@ -1,11 +1,11 @@
 define sftpd::config (
-###configuration params of sshd 
+#configuration params of sshd 
 	$config_dir			= '/etc/ssh', 		#default configuration
 	$config_file			= 'sshd_config',	#config file 
 	$ensure				= file,
 	$permission			= '0600',		#permission to config file
 
-###leave it as defaults
+#leave it as defaults
         $port				= undef,		#by default port number 22
 	$listen_address			= undef,		#to change listen addr 
 	$protocol			= '2',			#default protocol is 2
@@ -55,8 +55,8 @@ define sftpd::config (
     if $selenable != no {
     #changes applies to selinux to upload file via SFTP
        selboolean { 'ssh_chroot_rw_homedirs':
-           value        => on,
-     	   persistent   => true,
+           value                => on,
+     	   persistent           => true,
        }
      }
 }
