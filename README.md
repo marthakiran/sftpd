@@ -1,36 +1,3 @@
-{
-  "name": "kiran-sftpd",
-  "version": "0.1.2",
-  "author": "Kiran Martha",
-  "summary": "manage sFTP servers",
-  "license": "Apache 2.0",
-  "source": "git://github.com/marthakiran/sftpd.git",
-  "project_page": "https://github.com/marthakiran/sftpd",
-  "operatingsystem_support": [
-    {
-      "operatingsystemrelease": [
-        "5.0",
-        "6.0",
-        "7.0"
-      ],
-      "operatingsystem": "RedHat|CentOS"
-    },
-    {
-      "operatingsystemrelease": [
-        "12.04",
-        "10.04",
-        "16.05"
-      ],
-      "operatingsystem": "Ubuntu"
-    }
-  ],
-  "issues_url": "https://github.com/marthakiran/sftpd/issues",
-  "dependencies": [
-    {"version_requirement":">= 1.0.0","name":"puppetlabs/stdlib"}
-  ]
-}
-[root@puppet1 kiran-sftpd-0.1.2]# 
-[root@puppet1 kiran-sftpd-0.1.2]# cat README.md 
 # kiran-sftpd
 
 Module is going to install openssh and openssh-client application
