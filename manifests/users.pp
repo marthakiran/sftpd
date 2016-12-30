@@ -29,7 +29,8 @@ define sftpd::users (
   }
 
 #this configuration is going to create a user 
-  user { $user:
+  if $ensure == 'present' {
+   user { $user:
     ensure         => $ensure,
     shell          => $shell,
     home           => "${home}/${user}",
@@ -37,7 +38,13 @@ define sftpd::users (
     managehome     => $managehome,
     password       => $password,
     comment	   => $comment,
-  } 
+   } 
+  }
+  elsif $ensure == 'absent' {
+   user { $user:
+    ensure         => $ensure,
+   }
+  }
 
 #configure the home directory permission and ownership 
   if $ensure != absent {

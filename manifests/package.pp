@@ -1,16 +1,18 @@
 class sftpd::package ( 
-	$provider	= undef, 
-	$ensure		= undef,
+     $ensure     = installed,
 
 ) {
-	package { 'openssh':
-		name		=> 'openssh-server',
-		provider	=> $provider,
-		ensure		=> $ensure,
-	}
-	package { 'sshclient':
-		name		=> 'openssh-clients',
-		provider	=> $provider,
-		ensure		=> $ensure,
-	}
+     if $::operatingsystem == 'Ubuntu' {
+        $provider = apt
+        $apps     = [ 'openssh-server', 'openssh-client' ]
+     }
+     elsif $::operatingsystem == 'CentOS' {
+        $provider = yum
+        $apps     = [ 'openssh-server', 'openssh-clients' ]
+     }
+
+     package { $apps:
+        provider       => $provider,
+        ensure         => $ensure,
+     }
 }

@@ -37,12 +37,8 @@
 #
 
 class sftpd  {
-
-	class { '::sftpd::package':
-		provider		=> yum,
-		ensure			=> installed,	
-        }
-	class { '::sftpd::service': }
+  
+  class { '::sftpd::package':   } ~> class { '::sftpd::service': }
 
 $sftpusers = hiera('sftpd::users', {})
 create_resources('sftpd::users', $sftpusers)
