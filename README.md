@@ -13,8 +13,9 @@ Installing SSH server and start the service for you.
 ```
 
 Options for copy the configuration file of "SSH" service. 
-**1.** By default its using template for ssh configuration "${path}/templates/sshd_config.erb" .
-**2.** "${path}/files/sshd_config" file copy to remote host "${path}/files/sshd_config" .
+
+**1.** By default its using template for ssh configuration "${path}/templates/sshd_config.erb".
+**2.** "${path}/files/sshd_config" file copy to remote host "${path}/files/sshd_config".
 
 If you want to use "${path}/files/sshd_config" file instead of template , change as follows
 
@@ -36,6 +37,7 @@ If it "yes", It may take little bit time to set the boolean paramater for selinu
 ```
 
 Usage in manifest file to create Groups and Users .
+
 **To create Groups**
 ```
      sftpd::groups { 'sftpgroup1':
@@ -82,7 +84,8 @@ using hiera for user,share directory and groups creation.
          managehome: true		
          upload_dir: market
 ```
-Deleting the Users and Group from hiera .
+Deleting the Users and Group from hiera.
+
 **Delete The Group**
 ```
       sftpd::groups:
@@ -96,4 +99,4 @@ Deleting the Users and Group from hiera .
         'sftpuser1':
         ensure: absent
 ```
-**Thank You , Have a greate day!**
+**Thank You , Have a great day!**
