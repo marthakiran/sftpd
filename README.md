@@ -1,6 +1,6 @@
 kiran-sftpd
 
-###Module to manage the sftp
+### Puppet Module to manage the sftp
 
 Module is going to install openssh and openssh-client application
 and configure itself for sftpd server
