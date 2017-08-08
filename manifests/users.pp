@@ -50,7 +50,7 @@ define sftpd::users (
   if $ensure != absent {
    file { "${home}/${user}":
     ensure         => directory,
-    mode           => 0755,
+    mode           => '0755',
     recurse        => $recursive,
     recurselimit   => $recursive_limit,
     owner          => $owner,
@@ -65,7 +65,7 @@ define sftpd::users (
     ensure         => directory,
     owner          => $user,
     group          => $usersgroup,
-    mode           => 0755,
+    mode           => '0755',
    }
   #command run on agent to change the ownership of sftpd directories
   if $ownership_changed != no {
